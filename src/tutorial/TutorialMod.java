@@ -1,17 +1,14 @@
-package example;
+package tutorial;
 
 import arc.*;
 import arc.util.*;
-import mindustry.*;
-import mindustry.content.*;
 import mindustry.game.EventType.*;
-import mindustry.gen.*;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
-public class ExampleJavaMod extends Mod{
+public class TutorialMod extends Mod{
 
-    public ExampleJavaMod(){
+    public TutorialMod(){
         Log.info("Loaded ExampleJavaMod constructor.");
 
         //listen for game load event
@@ -30,7 +27,9 @@ public class ExampleJavaMod extends Mod{
 
     @Override
     public void loadContent(){
-        Log.info("Loading some example content.");
+        Log.info("Loading some tutorial content.");
+        ModItems modItems = new ModItems();
+        modItems.load();
     }
 
 }
