@@ -25,11 +25,11 @@ public class TutorialMod extends Mod{
         });
     }
 
-    @Override
-    public void loadContent(){
-        Log.info("Loading some tutorial content.");
-        ModItems modItems = new ModItems();
-        modItems.load();
-    }
-
+        public static ModItems modItems;
+        @Override
+        public void loadContent() {
+            Log.info("Loading some tutorial content.");
+            modItems = new ModItems();
+            modItems.load();
+        }
 }
